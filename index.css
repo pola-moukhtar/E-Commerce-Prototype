@@ -1,3 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  display: block;
+  transition: 0.3s ease;
+}
+.navbar a:hover {
+  background: #ff9800;
+  border-radius: 5px;
+}
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 per row */
@@ -5,6 +38,7 @@
   padding: 40px 20px;
 }
 
+/* Product Card */
 .card {
   background: white;
   border-radius: 10px;
@@ -29,6 +63,7 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+/* Responsive Design */
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
