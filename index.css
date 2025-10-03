@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Navbar */
 .navbar {
   background: #333;
   position: sticky;
@@ -31,6 +33,7 @@
   background: #ff9800;
   border-radius: 5px;
 }
+/* Products Layout as Grid */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 per row */
