@@ -1,53 +1,13 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-  background: #333;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-.navbar li {
-  margin: 0 15px;
-}
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  padding: 12px 20px;
-  display: block;
-  transition: 0.3s ease;
-}
-.navbar a:hover {
-  background: #ff9800;
-  border-radius: 5px;
-}
-
-/* Products Layout */
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row */
   gap: 20px;
   padding: 40px 20px;
 }
 
-/* Product Card */
 .card {
   background: white;
   border-radius: 10px;
-  width: 280px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -69,27 +29,15 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-wrap: wrap;
-  }
-  .navbar a {
-    font-size: 14px;
-    padding: 10px;
-  }
-  .card {
-    width: 90%;
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
   }
 }
 
-@media (max-width: 480px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar li {
-    margin: 5px 0;
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
   .card img {
     height: 160px;
